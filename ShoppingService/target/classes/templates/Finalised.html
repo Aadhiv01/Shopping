@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Finalised Purchase</title>
+</head>
+<body>
+<h1>Welcome <span th:text="${user.name }"></span></h1>
+<h1>Order Summary : </h1>
+<table border="1">
+	<tr>
+		<th>Product ID</th>
+		<th>Quantity</th>
+		<th>Price</th>
+	</tr>
+	<tr th:each="item : ${items}">
+		<td th:text="${item.productId}"></td>
+		<td th:text="${item.quantity}"></td>
+		<td th:text="${item.productPrice}"></td>
+	</tr>
+</table>
+<h2>Total : <span th:text="${total}"></span></h2><br>
+<a href = "./order">Order</a><br>
+<a href="./proceed">Go Back</a>
+</body>
+</html>

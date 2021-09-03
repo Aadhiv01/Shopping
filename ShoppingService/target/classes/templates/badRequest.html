@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Bad Request</title>
+</head>
+<body>
+<h1>SORRY</h1>
+<h2>Product with id - <span th:text="${id}"></span> 
+<span th:if="${id &lt; 0}"> can't have negative quantity</span>
+<span th:unless="${id &lt; 0}"> doesn't have enough stock</span>
+</h2><br>
+<a href="./main">Back to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href='../themes/Entry.css' >
+</head>
+<body background="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm314-adj-02-g_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=8ad547271612c88f2095746cbfd7f662">
+<header>REGISTER YOURSELF</header>
+<section class="box">
+<h2>SignUp</h2>
+	<form action="#" th:action = "@{./save}" method = "post" th:object="${user}">
+		<section class="inputBox"><label><span class="glyphicon glyphicon-user">&nbsp;UserName</span></label><br>
+		<input type="text" th:field="*{name}" placeholder = "Enter name"/></section>
+		<section class="inputBox"><label><span class="fa fa-address-card">&nbsp;Address</span></label><br>
+		<input type="text" th:field="*{address}" placeholder = "Enter Address"/></section>
+		<section class="inputBox"><label><span class="glyphicon glyphicon-envelope">&nbsp;Email</span></label><br>
+		<input type="email" th:field="*{email}" placeholder = "Enter email"/></section>
+		<section class="inputBox"><label><span class="glyphicon glyphicon-lock">&nbsp;Password</span></label><br>
+		<input type="password" th:field="*{password}" placeholder = "Enter password"/></section>
+		<input type="submit" name="sign-in" value="Register">
+	</form>
+	<h3>Existing User? &nbsp;<a href="./">Login</a></h3>
+</section>
+</body>
+</html>
